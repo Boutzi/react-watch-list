@@ -1,0 +1,37 @@
+@use "../utils/" as *;
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    min-height: 50vh;
+    @media (max-width: 769px) {
+        gap: 50px;
+        min-height: 60vh;
+    }
+    &__title {
+        display: flex;
+        font-size: 288px;
+        color: $color-primary;
+        @media (max-width: 769px) {
+            font-size: 8rem;
+        }
+    }
+    &__subtitle {
+        display: flex;
+        text-align: center;
+        font-size: 36px;
+        color: $color-primary;
+        font-weight: $font-weight-medium;
+        @media (max-width: 769px) {
+            font-size: $font-size-m;
+        }
+    }
+    &__link {
+        display: flex;
+        text-align: center;
+        font-weight: $font-weight-bold;
+    }
+}

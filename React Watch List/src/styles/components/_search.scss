@@ -1,0 +1,91 @@
+@use "../utils/" as *;
+
+.search {
+  display: flex;
+  flex-direction: column;
+  &__bar {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 40px;
+    background-color: $color-secondary;
+    border-radius: $border-radius-xxl;
+    opacity: 0.9;
+    border: 1px solid white;
+    box-shadow: $box-shadow-xl;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      opacity: 1;
+      border: 1px solid white;
+    }
+    &:focus {
+      opacity: 1;
+      box-shadow: $box-shadow-xxl;
+    }
+    &__icon {
+      color: $color-primary;
+      margin-left: 6px;
+      height: 20px;
+    }
+    &__input {
+      color: $color-tertiary;
+      font-weight: $font-weight-bold;
+      height: 40px;
+      margin-left: 6px;
+      border: none;
+      font-size: $font-size-s;
+      width: 100%;
+      background: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  &__results {
+    overflow: hidden;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    opacity: 0.9;
+    margin-top: 10px;
+    max-height: 400px;
+    height: auto;
+    color: $color-text;
+    font-size: $font-size-m;
+    background: $color-secondary;
+    overflow-y: scroll;
+    text-wrap: wrap;
+    border-radius: $border-radius-m;
+    &::-webkit-scrollbar {
+      width: $scrollbar-size;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb;
+      border-radius: $border-radius-l;
+    }
+    &__item {
+      width: 100%;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f6c5c5;
+      }
+      &__format {
+        display: flex;
+        &__img {
+          height: 88px;
+          width: auto;
+        }
+        &__title {
+          margin-left: 20px;
+          align-items: center;
+          display: flex;
+        }
+      }
+    }
+  }
+}

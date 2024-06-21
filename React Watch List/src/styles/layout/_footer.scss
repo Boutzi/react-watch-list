@@ -1,0 +1,23 @@
+@use "../utils/" as *;
+
+.footer {
+  font-family: $font-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background: $color-canvas-inverted;
+  height: 209px;
+  width: 100%;
+  margin-top: 50px;
+  &__logo {
+    display: flex;
+    width: 122px;
+    margin-bottom: 50px;
+  }
+  &__copyright {
+    display: flex;
+    color: $color-text-inverted;
+  }
+}
